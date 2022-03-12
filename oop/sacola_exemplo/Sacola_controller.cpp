@@ -67,5 +67,5 @@ bool Sacola::remover(int x)
 void Sacola::mostrar()
 {
     for (int i = 0; i < contador; i++)
-        cout << i << " - ";
+        cout << this->dados[i] << " - ";
 }
