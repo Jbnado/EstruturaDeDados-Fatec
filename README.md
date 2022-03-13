@@ -362,6 +362,80 @@ int main() {
 Agora temos os valores de x1 e x2 sendo nossas 2 raízes. Utilizar a passagem por referência é a melhor forma de se alterar valores da main dentro de funções.
 
 ### Struct
+Você já pensou alguma vez "Nossa adoraria criar meu próprio tipo de variável, seria tão mais fácil e prático". Bom se sim, tenho uma boa noticía, struct é uma forma de se criar seu próprio tipo. Imagine que você precisa criar um tipo Pessoa. a Pessoa teria um nome e uma idade então você poderia fazer desta forma:
+```cpp
+string pessoa1Nome = 'bob';
+int pessoa1Idade = '10';
+```
+Bom mas e se você precisar de 50 pessoas? Você fará 100 linhas só para adicioná-los?
+É exatamente para casos como esses que criar nosso próprio tipo seria muito eficaz, então veremos agora como criar nossa primeira struct:
+```cpp
+//Há 2 maneiras de se criar uma struct
+//podemos utilizar da seguinte sintaxe para a primeira:
+//typdef struct {Atributos da Struct}NomeDaStruct;
+typdef struct {
+  string nome;
+  int idade;
+}Pessoa;
+```
+```cpp
+//podemos utilizar da seguinte sintaxe para a segunda maneira:
+//struct NomeDaStruct {DADOS DA STRUCT};
+struct Pessoa{
+  string nome;
+  int idade;
+};
+
+//Agora é só utilizar da struct:
+Pessoa bob;
+//Para acessar os atributos internos de uma struct utilizamos o nome da variavel um ponto final (.) e o nome do atributo.
+bob.nome = "Bob Boberson";
+bob.idade = 20;
+cout << "Nome: " << bob.nome << "\n";
+cout << "Idade: " << bob.idade << "\n";
+```
+Porém reparem eu não resolvi nosso problema, ainda preciso criar 50 variáveis para criar 50 pessoas?
+Não! Nós podemos utilizar do tipo criado por nós para criarmos um array daquele tipo.
+```cpp
+struct Pessoa
+    {
+        string nome;
+        int idade;
+        float salario;
+    };
+    //Aqui crio um array de pessoas do tipo Pessoa de 3 posições
+    Pessoa pessoas[3];
+    
+    pessoas[0].nome = "Bob Wilson";
+    pessoas[0].idade = 33;
+    pessoas[0].salario = 890.50;
+
+    pessoas[1].nome = "Patrick Donald";
+    pessoas[1].idade = 37;
+    pessoas[1].salario = 900.70;
+
+    pessoas[2].nome = "Lula Mouse";
+    pessoas[2].idade = 43;
+    pessoas[2].salario = 1890.50;
+
+    // UTILIZANDO FOR NORMAL
+    cout << "For";
+    for (int i = 0; i < 3; i++)
+    {
+        cout << "Nome: " << pessoas[i].nome << "\n";
+        cout << "Idade: " << pessoas[i].idade << "\n";
+        cout << "Salario: " << pessoas[i].salario << "\n\n";
+    }
+    // UTILIZANDO FOR EACH
+    cout << "For Each \n";
+    //Reparem que estou passando o tipo Pessoa ao invés de auto no for each.
+    for (Pessoa element : pessoas)
+    {
+        cout << "Nome: " << element.nome << "\n";
+        cout << "Idade: " << element.idade << "\n";
+        cout << "Salario: " << element.salario << "\n\n";
+    }
+```
 
 # Referências
 - PEOPLE, O que são variáveis e para que elas servem na programação? Disponível em: <https://www.people.com.br/noticias/informatica/o-que-sao-variaveis-e-para-que-elas-servem-na-programacao>. Acesso em 12/03/2022.
