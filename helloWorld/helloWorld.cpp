@@ -122,7 +122,7 @@ int main()
     int exemplo = 1;
     cout << "exemplo:" << exemplo << "\n";
     alterarValorPorReferencia(exemplo);
-    cout << "exemplo:" << exemplo << "\n";
+    cout << "exemplo:" << exemplo << "\n\n";
 
     // EXEMPLO DE PASSAGEM POR REFERENCIA PARA CALCURAR BHASKARA
     float x1 = 0, x2 = 0;
@@ -135,59 +135,61 @@ int main()
     cout << "Digite o valor de coeficienteC: ";
     cin >> coeficienteC;
     delta = calculaBhaskara(coeficienteA, coeficienteB, coeficienteC, x1, x2);
-    cout << "O valor do delta e: " << delta << endl;
-    cout << "O valor de x1 e: " << x1 << endl;
-    cout << "O valor de x2 e: " << x2 << endl;
+    cout << "O valor do delta e: " << delta << "\n";
+    cout << "O valor de x1 e: " << x1 << "\n";
+    cout << "O valor de x2 e: " << x2 << "\n\n";
 
     // EXEMPLO DE STRUCT SIMPLES
-    //  struct Pessoa {
-    //      string nome;
-    //      int idade;
-    //      float salario;
-    //  };
-    //  Pessoa bob;
-    //  bob.nome = "Bob Boberson";
-    //  bob.idade = 20;
-    //  bob.salario = 1100.00;
-    //  cout << "Nome: " << bob.nome << "\n";
-    //  cout << "Idade: " << bob.idade << "\n";
-    //  cout << "Salario: " << bob.salario << "\n";
+    struct Pessoa
+    {
+        string nome;
+        int idade;
+        float salario;
+    };
+    Pessoa bob;
+    bob.nome = "Bob Boberson";
+    bob.idade = 20;
+    bob.salario = 1100.00;
+    cout << "Nome: " << bob.nome << "\n";
+    cout << "Idade: " << bob.idade << "\n";
+    cout << "Salario: " << bob.salario << "\n\n";
 
     // EXEMPLO DE STRUCT COM ARRAYS
-    //  struct Pessoa
-    //  {
-    //      string nome;
-    //      int idade;
-    //      float salario;
-    //  };
-    //  int j = 0;
-    //  Pessoa pessoas[3];
-    //  pessoas[0].nome = "Bob Wilson";
-    //  pessoas[0].idade = 33;
-    //  pessoas[0].salario = 890.50;
-    //  j++;
-    //  pessoas[1].nome = "Patrick Donald";
-    //  pessoas[1].idade = 37;
-    //  pessoas[1].salario = 900.70;
-    //  j++;
-    //  pessoas[2].nome = "Lula Mouse";
-    //  pessoas[2].idade = 43;
-    //  pessoas[2].salario = 1890.50;
-    //  j++;
-    //  //UTILIZANDO FOR NORMAL
-    //  // for (int i = 0; i < j; i++)
-    //  // {
-    //  //     cout << "Nome: " << pessoas[i].nome << "\n";
-    //  //     cout << "Idade: " << pessoas[i].idade << "\n";
-    //  //     cout << "Salario: " << pessoas[i].salario << "\n\n";
-    //  // }
-    //  //UTILIZANDO FOR EACH
-    //  for (auto element : pessoas)
-    //  {
-    //      cout << "Nome: " << element.nome << "\n";
-    //      cout << "Idade: " << element.idade << "\n";
-    //      cout << "Salario: " << element.salario << endl;
-    //  }
+    struct Pessoa1
+    {
+        string nome;
+        int idade;
+        float salario;
+    };
+    Pessoa1 pessoas[3];
+    pessoas[0].nome = "Bob Wilson";
+    pessoas[0].idade = 33;
+    pessoas[0].salario = 890.50;
+
+    pessoas[1].nome = "Patrick Donald";
+    pessoas[1].idade = 37;
+    pessoas[1].salario = 900.70;
+
+    pessoas[2].nome = "Lula Mouse";
+    pessoas[2].idade = 43;
+    pessoas[2].salario = 1890.50;
+
+    // UTILIZANDO FOR NORMAL
+    cout << "For";
+    for (int i = 0; i < 3; i++)
+    {
+        cout << "Nome: " << pessoas[i].nome << "\n";
+        cout << "Idade: " << pessoas[i].idade << "\n";
+        cout << "Salario: " << pessoas[i].salario << "\n\n";
+    }
+    // UTILIZANDO FOR EACH
+    cout << "For Each \n";
+    for (Pessoa1 element : pessoas)
+    {
+        cout << "Nome: " << element.nome << "\n";
+        cout << "Idade: " << element.idade << "\n";
+        cout << "Salario: " << element.salario << "\n\n";
+    }
 
     return 0;
 }
