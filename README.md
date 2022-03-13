@@ -1,4 +1,5 @@
 # Estrutura de Dados em C++
+
 <p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/">
   <a property="dct:title" rel="cc:attributionURL" href="https://github.com/Jbnado/EstruturaDeDados-Fatec/">
     Estrutura de Dados - FATEC</a> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://github.com/Jbnado/">
@@ -13,18 +14,24 @@
 <img alt="GitHub" src="https://img.shields.io/github/license/Jbnado/EstruturaDeDados-Fatec">
 
 ## Sobre o Projeto
+
 Este repositório foi criado para acompanhar as aulas de estruturas de dados na FATEC (Faculdade de Tecnologia de Ribeirão Preto), o intuito dele é ter comentários para que qualquer um que venha a ler entenda o que está acontecendo. Para ficar mais claro decidi criar este README, é o primeiro que crio para um projeto e espero que ele lhe ajude a conhecer e entender a linguagem proposta assim como as estruturas de dados utilizadas.
 
 ## Hello World
+
 A pasta [Hello World](https://github.com/Jbnado/EstruturaDeDados-Fatec/tree/main/helloWorld) é onde se inicia nosso entendimento na linguagem, na linguagem c é comum o uso de includes, os includes é o comando para incluir bibliotecas prontas para facilitar nossa escrita e entendimento do código, cada biblioteca assim como na realidade tem diversos livros, porém no caso das bibliotecas em c estes livros seriam funções e metódos para serem reutilizados.
+
 ### Bibliotecas
+
 As bibliotecas que utilizo em [Hello World](https://github.com/Jbnado/EstruturaDeDados-Fatec/tree/main/helloWorld) são:
+
 - iostream <br>
- Neste [link](https://docs.microsoft.com/pt-br/cpp/standard-library/iostream?view=msvc-170) oficial da microsoft você terá a explicação da biblioteca, repare que a mesma utiliza de algumas outras bibliotecas para seu funcionamento. A utilização dela em nosso [Hello World](https://github.com/Jbnado/EstruturaDeDados-Fatec/tree/main/helloWorld) é para utilizar dos comandos com namespace std que são o std::cout e std::cin, repare que na linha 4 de [HelloWorld](https://github.com/Jbnado/EstruturaDeDados-Fatec/tree/main/helloWorld) eu utilizo do comando "using namespace std;", que não é recomendado a ser utilizado desta forma, e sim especificando quais comandos do std você deseja utilizar no seu arquivo, porém para a didática de um simples [Hello World](https://github.com/Jbnado/EstruturaDeDados-Fatec/tree/main/helloWorld) eu decidi utilizá-lo.
+  Neste [link](https://docs.microsoft.com/pt-br/cpp/standard-library/iostream?view=msvc-170) oficial da microsoft você terá a explicação da biblioteca, repare que a mesma utiliza de algumas outras bibliotecas para seu funcionamento. A utilização dela em nosso [Hello World](https://github.com/Jbnado/EstruturaDeDados-Fatec/tree/main/helloWorld) é para utilizar dos comandos com namespace std que são o std::cout e std::cin, repare que na linha 4 de [HelloWorld](https://github.com/Jbnado/EstruturaDeDados-Fatec/tree/main/helloWorld) eu utilizo do comando "using namespace std;", que não é recomendado a ser utilizado desta forma, e sim especificando quais comandos do std você deseja utilizar no seu arquivo, porém para a didática de um simples [Hello World](https://github.com/Jbnado/EstruturaDeDados-Fatec/tree/main/helloWorld) eu decidi utilizá-lo.
 - math.h <br>
   Esta biblioteca contém diversas operações matemáticas prontas para uso de forma simplificada, para um exemplo por favor imagine que você em seu arquivo você necessita várias vezes calcular expoentes, caso seja um iniciante você diversas vezes teria que fazer um for implementando seu expoente e ele seria copiado e colado pelo seu código, daí você com certeza aprenderia funções e criaria sua função de expoente assim reutilizando código da forma correta. Parabéns você aprendeu a implementar sua própria função de expoente, agora por quê não utilizar de uma biblioteca que já temos na linguagem c que implementa uma função similar a qual você necessita? Espero que este exemplo tenha alcançado seu objetivo de entender o uso da math.h em nosso arquivo. Para saber mais sobre outras funções na math.h recomendo este [link](https://www.cplusplus.com/reference/cmath/).
 
 Agora que você entendeu sobre os includes em c, podemos então fazer nossa função principal e assim escrever nosso primeiro Hello World em c++.
+
 ```cpp
 #include <iostream>
 
@@ -35,7 +42,9 @@ int main() {
 ```
 
 ### Variáveis
+
 Agora podemos dar inicío aos entendimentos das variáveis em c++ e aproveitando do namespace std temos muitos tipos que podemos utilizar em nosso arquivo:
+
 ```cpp
  // EXEMPLOS DE VARIAVEIS
     char charVar = 't';
@@ -55,14 +64,17 @@ Agora podemos dar inicío aos entendimentos das variáveis em c++ e aproveitando
 ```
 
 Repare que uma variável bool nada mais é do que um binário, sendo 1 true e 0 false.
-Mas afinal o que é uma variável? 
-Uma variável é um espaço na memória do computador destinado a um dado que é alterado durante a execução do algoritmo. Para funcionar corretamente, as variáveis precisam ser definidas por nomes e tipos (PEOPLE, 2019).
+Mas afinal o que é uma variável?
+
+> Uma variável é um espaço na memória do computador destinado a um dado que é alterado durante a execução do algoritmo. Para funcionar corretamente, as variáveis precisam ser definidas por nomes e tipos (PEOPLE, 2019).
 
 ### Funções
+
 Já falei sobre funções acima porém não expliquei sobre, uma função é um trecho de algoritmo muito bem definido e que será reutilizado uma ou mais vezes na escrita de seu código, por isso nós o encapsulamos e o intulamos função se nos retorne algo, caso não podemos o nomear de um procedimento. o Código se torna mais legível e muito mais organizado utilizando funções, caso queira aprender mais sobre o que é uma função na programação recomendo este [site](https://www.ime.usp.br/~leo/mac2166/2017-1/introducao_funcoes.html#:~:text=A%20ideia%20b%C3%A1sica%20de%20uma,e%20posterior%20invoca%C3%A7%C3%A3o%20%C3%A0%20fun%C3%A7%C3%A3o.).
 
 Para começarmos nosso entendimento sobre funções criaremos um procedimento que escreve no terminal sempre que invocado. Como ele não nos retornará nada seu tipo será void.
 Para escrever uma função ela deve sempre vir antes da main para que o computador a localize e a crie e assim possa utilizá-la.
+
 ```cpp
 // EXEMPLO DE FUNÇÃO
 void olaMundo()
@@ -72,6 +84,7 @@ void olaMundo()
 ```
 
 Agora é só utilizar nossa função na main que nada mais é que nossa função principal.
+
 ```cpp
 // EXEMPLO DE USO DE FUNÇÃO
     olaMundo();
@@ -85,6 +98,7 @@ void funcaoComParametros(string nome, int idade);
 ```
 
 Após a main então devemos escrever o conteúdo para esta função que será escrever no terminal os paramêtros apresentados em sua chamada:
+
 ```cpp
 void funcaoComParametros(string nome, int idade)
 {
@@ -93,7 +107,7 @@ void funcaoComParametros(string nome, int idade)
 }
 ```
 
-Agora é só testar: 
+Agora é só testar:
 
 ```cpp
  // EXEMPLO DE USO DA FUNCAO DECLARADA APOS O MAIN
@@ -111,6 +125,7 @@ o trecho "cin >>" é para entrada de valores pelo terminal, o usuário escrever�
 ![image](https://user-images.githubusercontent.com/73846881/158028792-67255fc3-6147-4a14-99a3-97a502dd04dc.png)
 
 ### Estruturas de Decisão
+
 Em c++ temos diversas formas de se tomar uma decisão, aqui abordarei a mais comum que é if, else if e else, que respectivamente traduzidos são se, se não se e se não.
 Para se aprofundar no assunto de estruturas de decisões recomendo este [link](https://www.devmedia.com.br/estrutura-de-decisao-em-c-c/24031) que é simples e de fácil entendimento.
 Para nosso exemplo irei verificar se 2 é maior que 3 e escrever o resultado disto no terminal:
@@ -137,15 +152,19 @@ Em c++ este mesmo caso pode ser simplificado com a estrutura de decisão em tern
 ```
 
 ### Estruturas de Repetição
+
 Novamente não irei me ater a todas as estruturas de repetição por aqui, irei lhes apresentar o for loop, uma estrutura de repetição básica e que com certeza você irá utilizar sempre. Caso deseje aprender mais sobre estruturas de repetição lhes indico este [link](https://www.inf.pucrs.br/~pinho/LaproI/ComandosDeRepeticao/Repeticao.html), apenas lhes lembrando que estamos usando c++, ou seja, vocês podem substituir o printf dos exemplos do link pelo cout.
 
 Para lhes apresentar ao for loop antes iremos conhecer um método para guardar vários valores iguais juntos, o array:
+
 ```cpp
 //tipoDoArray nomeDaVariavel[tamanhoDoArray] = {valores,} // caso decida dar valores iciais utilize de chaves para isto.
 int array[5] = {1, 2, 3, 4, 5}
 //Exemplo de array de inteiros de nome array com 5 posições, ele está guardando os valores de 1 a 5.
 ```
+
 Agora imaginem que vocês desejam criar um array vazio de tamanho n no qual guardará valores de 0 a n, como poderiamos fazer isto sem uma estrtura de repetição?
+
 ```cpp
 int a[2];
 //Lembrando que nossa contagem decimal se inicia em 0, por isso 2 posições são as posições 0 e 1.
@@ -153,13 +172,16 @@ a[0] = 0;
 a[1] = 1;
 //Agora nosso aray tem os valores guardados de {0, 1}
 ```
+
 Agora iremos para uma estrutura de repetição para fazer o mesmo que acima, porém de forma eficiente e eficaz.
 o for é uma função e ele recebe três paramêtros:
+
 - O primeiro sendo opcional no qual podemos criar, dar valores e inicializar variáveis.
 - O segundo será a condição para que a repetição aconteça.
 - E a terceira será algo que acontecerá caso aquela repetição seja concluída com sucesso, ou seja se eu colocar uma variável int contador no terceiro paramêtro com um contador = contador + 1, sempre que uma repetição ocorrer com sucesso o contador receberá ele mesmo + 1, até que a condição do segundo paramêtro seja alcançada.
 
 É de extrema importância que você se atenha ao seu segundo paramêtro, loops infinitos são erros comuns, então sempre tenham atenção para não iniciar um.
+
 ```cpp
 //for(neste campo você pode inicializar novas variáveis; aqui irá algo que acontecerá sempre que a repetição acontecer){}
 int a[2];
@@ -168,6 +190,7 @@ for(int contador = 0; contador < 2; contador = contador + 1) {
   a[contador] = contador;
 }
 ```
+
 Percebam que estamos agora fazendo o mesmo que o exemplo anterior, porém dentro de uma repetição, sempre que o contador for menor que 2 que é o tamanho de nosso array o trecho de algoritmo dentro do for irá se repetir.
 Começamos nosso contador como 0, 0 é menor que 2 então a na posição de contador que é 0 recebe o valor 0, ou seja a[0] = 0.
 A repetição deu certo, então nosso contador receberá ele mesmo mais 1, ou seja 0 + 1 = 1. O contador agora é 1.
@@ -176,6 +199,7 @@ agora a na posição 1 recebe 1, ou seja a[1] = 1.
 A repetição foi concluída com sucesso então o contador será mais uma vez incrementado em 1, então 1 + 1 = 2.
 O contador agora é 2, 2 não é menor que 2, é igual. Nossa condição para repetir o for não foi atendida e assim a repetição é finalizada.
 Acabamos de usar nosso primeiro for e entender como ele funciona! Que tal agora usarmos o for para mostrar os valores dentro de a?
+
 ```cpp
 int a[5] = {1, 2, 3, 4, 5};
 //FOR LOOP
@@ -183,7 +207,9 @@ for(int i = 0; i < 5; i++) {
   cout << a[i] << "\n";
 }
 ```
+
 E este foi nosso for em c++, porém há uma forma de fazer algo similar ao código acima, em outras linguagens como javascript é chamado de forEach, uma repetição por cada elemento de um array.
+
 ```cpp
 //Caso não saiba o tipo da variável guardada em cada posição de a o c++ tem um tipo chamado auto.
 //auto irá automaticamante atribuir o tipo correto para a variável.
@@ -195,18 +221,21 @@ for (auto element : a)
         cout << element << "\n";
     }
 ```
+
 O pró de se usar este tipo de for é não ter que se preocupar com uma condição para que ocorra, se precisamos percorrer todo o array esta forma é a mais aconselhável.
 
 Agora eu me pergunto se você teve a mesma dúvida que eu. E caso eu necessite fazer um for comum e não saiba o tamanho de meu array?
 Entraremos agora em um campo que muitos acham complicado no C/C++, como é uma linguagem que podemos trabalhar com o hardware da máquina há formas de se saber o endereço fisíco de variáveis, calma, não precisa ficar afobado.
 
 ### Endereços
-A memória RAM (= random access memory) de qualquer computador é uma sequência de bytes.  A posição (0, 1, 2, 3, etc.) que um byte ocupa na sequência é o endereço (= address) do byte.  (É como o endereço de uma casa em uma longa rua que tem casas de um lado só.)  Se e é o endereço de um byte então e+1 é o endereço do byte seguinte.
-Cada variável de um programa ocupa um certo número de bytes consecutivos na memória do computador. Uma variável do tipo char ocupa 1 byte.  Uma variável do tipo int ocupa 4 bytes e um double ocupa 8 bytes em muitos computadores.  O número exato de bytes de uma variável é dado pelo operador sizeof. A expressão sizeof (char), por exemplo, vale 1 em todos os computadores e a expressão sizeof (int) vale 4 em muitos computadores.
-Cada variável (em particular, cada registro e cada vetor) na memória tem um endereço (DCC-IME-USP, 2018).
+
+> A memória RAM (= random access memory) de qualquer computador é uma sequência de bytes. A posição (0, 1, 2, 3, etc.) que um byte ocupa na sequência é o endereço (= address) do byte. (É como o endereço de uma casa em uma longa rua que tem casas de um lado só.) Se e é o endereço de um byte então e+1 é o endereço do byte seguinte.
+> Cada variável de um programa ocupa um certo número de bytes consecutivos na memória do computador. Uma variável do tipo char ocupa 1 byte. Uma variável do tipo int ocupa 4 bytes e um double ocupa 8 bytes em muitos computadores. O número exato de bytes de uma variável é dado pelo operador sizeof. A expressão sizeof (char), por exemplo, vale 1 em todos os computadores e a expressão sizeof (int) vale 4 em muitos computadores.
+> Cada variável (em particular, cada registro e cada vetor) na memória tem um endereço (DCC-IME-USP, 2018).
 
 Com esta linda explicação espero que se torne mais fácil de entender que sabendo o endereço de uma variável podemos também saber seu tipo, já que cada tipo ocupa certos números de bytes.
 Para sabermos o endereço de uma variável usamos o & na frente da mesma.
+
 ```cpp
 //ENDEREÇOS
  char charEndereco = 't';
@@ -224,12 +253,14 @@ Para sabermos o endereço de uma variável usamos o & na frente da mesma.
  cout << "boolEndereco = " << &boolEndereco << "\n";
  cout << "boolEndereco2 = " << &boolEndereco2 << "\n\n";
 ```
+
 Teremos um resultado como este:
 
 ![image](https://user-images.githubusercontent.com/73846881/158032029-6f2a99e4-06c6-40b9-a041-7ff3b42fb8d5.png)
 
 Irei entregar para vocês que como estamos falando de bytes gostariam que percebessem que a memória é mostrada como um número hexadecimal e como as variáveis foram criadas uma a seguir da outra os números decimais vão mudando com um intervalo capaz de contarmos se convertessemos o número hexadecimal para decimal. Logo descobriríamos que o intervalo entre cada uma mostra a quantidade de bytes que estão ocupando.
 Em c temos uma função chamada sizeof que nos retorna exatamente a quantidade de bytes que cada variavel ocupa.
+
 ```cpp
  cout << "charEndereco = " << sizeof(charEndereco) << "\n";
  cout << "stringEndereco = " << sizeof(stringEndereco) << "\n";
@@ -239,6 +270,7 @@ Em c temos uma função chamada sizeof que nos retorna exatamente a quantidade d
  cout << "boolEndereco = " << sizeof(boolEndereco) << "\n";
  cout << "boolEndereco2 = " << sizeof(boolEndereco2) << "\n\n";
 ```
+
 ![image](https://user-images.githubusercontent.com/73846881/158032560-90ae61fd-701d-4d9a-af23-773a25f73d70.png)
 
 Okay, agora sabemos como termos o endereço de uma variável e como saber os tamanhos que cada variável ocupa, mas lembrem-se estamos nesta jornada de aprendizado pois queremos saber qual o tamanho de determinado array. Um array pode receber n informações de acordo com seu tamanho, então sizeof(a) iria nos retornar seu tamanho em bytes mas não o tamanho em quantidade de dados que pode guardar.
@@ -246,19 +278,22 @@ Claro poderiamos ent saber o tipo do array e calcular, exemplo: temos um array i
 Mas e se eu não souber o tipo da variável?
 
 ### Ponteiros
+
 Ponteiros é o pesadelo dos programadores iniciantes, mas calma jovem gafanhoto, ele não é um monstro, após prática e conceitos abstratos entender o que é um ponteiro em C é muito simples.
 
-Um ponteiro (= apontador = pointer) é um tipo especial de variável que armazena um endereço.  Um ponteiro pode ter o valor
-NULL
-que é um endereço inválido.  A macro NULL está definida na interface stdlib.h e seu valor é 0 (zero) na maioria dos computadores.
-Se um ponteiro p armazena o endereço de uma variável i, podemos dizer  p aponta para i  ou  p é o endereço de i.  (Em termos um pouco mais abstratos, diz-se que p é uma referência à variável i.)  Se um ponteiro p tem valor diferente de NULL então
-*p
-é o valor da variável apontada por p.  (Não confunda esse operador * com o operador de multiplicação!)  Por exemplo, se i é uma variável e p vale &i então dizer *p é o mesmo que dizer i (DCC-IME-USP).
+> Um ponteiro (= apontador = pointer) é um tipo especial de variável que armazena um endereço. Um ponteiro pode ter o valor
+> NULL
+> que é um endereço inválido. A macro NULL está definida na interface stdlib.h e seu valor é 0 (zero) na maioria dos computadores.
+> Se um ponteiro p armazena o endereço de uma variável i, podemos dizer p aponta para i ou p é o endereço de i. (Em termos um pouco mais abstratos, diz-se que p é uma referência à variável i.) Se um ponteiro p tem valor diferente de NULL então
+> _p
+> é o valor da variável apontada por p. (Não confunda esse operador _ com o operador de multiplicação!) Por exemplo, se i é uma variável e p vale &i então dizer \*p é o mesmo que dizer i (DCC-IME-USP).
 
 Agora vamos abstrair mais esta teoria de ponteiros.
+
 ```cpp
 int *p;
 ```
+
 No código acima eu criei um ponteiro int, como dito por Feofiloff no trecho acima um ponteiro pode ter um valor NULL. Quando criamos um ponteiro e não o apontamos para endereço algum ele não passa de um valor NULL. E lembrem-se bem disso, um ponteiro aponta para um endereço, então ele deve receber endereços.
 
 ```cpp
@@ -267,6 +302,7 @@ int *p;
 int a = 3;
 p = a;
 ```
+
 Neste caso p recebeu a que é 3, logo p agora é 3, mas 3 não é um endereço de variável! Precisamos utilizar o & na frente da variável para que o ponteiro receba o endereço!
 
 ```cpp
@@ -277,6 +313,7 @@ p = &a;
 cout << "Endereco de a = " << &a << "\n";
 cout << "Endereco guardado em p = " << p << "\n";
 ```
+
 Leiam atentamente o código acima, percebam que como um ponteiro guarda endereços nós não devemos usar & para sabermos o endereço e sim apenas usarmos a variável.
 No caso acima p guarda o endereço de a então p é o endereço de a.
 
@@ -284,6 +321,7 @@ Agora que aprendemos o que é um ponteiro e como usá-los de forma básica posso
 
 Simples, usaremos sizeof(*array). Por quê? Porque sizeof nos retorna o tamanho da variavel, colocando um ponteiro na frente ele vai nos retornar o tamanho de cada item no array.
 Ou seja se temos um array de tamanho e tipo desconhecido e usamos sizeof(array) e sizeof(*array) podemos receber de valor um 28 e um 4 respectivamente, 4 é o número de bytes para se guardar um valor int e 28 dividido por 4 é 7, ou seja temos um int array[7].
+
 ```cpp
 // LENGHT DO ARRAY
 int b[7];
@@ -314,6 +352,7 @@ int main() {
   return 0;
 }
 ```
+
 Pronto temos nossa função que calcula bháskara mas que só me retorna o delta. Agora iremos modificá-la para que receba mais 2 paramêtros: x1 e x2. Esses novos dois paramêtros serão criados já com o & na frente, pois precisaremos dos endereços das variáveis passada para a função. Pense comigo, se eu tiver o endereço de uma variável criada na função main posso alterar o valor guardado naquele endereço de memória.
 Vamos para mais um exemplo antes de retornarmos a bháskara:
 
@@ -330,6 +369,7 @@ int main() {
   return 0;
 }
 ```
+
 Percebam que quando criei um paramêtro na função coloquei o & na frente, pois quero pegar o endereço de memória da variável que eu receber. Tendo este endereço qualquer mudança de valor daquela variável na função irá afetar a variável que você passou para a função na main.
 Por isso nosso a na main se inicia como 1, mas após ser passado como paramêtro na função ele agora é 5.
 Utilizamos de passagem por referência para podermos alterar valores na main dentro de uma função, e é usando esta técnica que poderemos retornar nossas raízes na função de calcular bháskara.
@@ -359,16 +399,21 @@ int main() {
   cout << "O valor de x2 e: " << x2 << endl;
 }
 ```
+
 Agora temos os valores de x1 e x2 sendo nossas 2 raízes. Utilizar a passagem por referência é a melhor forma de se alterar valores da main dentro de funções.
 
 ### Struct
+
 Você já pensou alguma vez "Nossa adoraria criar meu próprio tipo de variável, seria tão mais fácil e prático". Bom se sim, tenho uma boa noticía, struct é uma forma de se criar seu próprio tipo. Imagine que você precisa criar um tipo Pessoa. a Pessoa teria um nome e uma idade então você poderia fazer desta forma:
+
 ```cpp
 string pessoa1Nome = 'bob';
 int pessoa1Idade = '10';
 ```
+
 Bom mas e se você precisar de 50 pessoas? Você fará 100 linhas só para adicioná-los?
 É exatamente para casos como esses que criar nosso próprio tipo seria muito eficaz, então veremos agora como criar nossa primeira struct:
+
 ```cpp
 //Há 2 maneiras de se criar uma struct
 //podemos utilizar da seguinte sintaxe para a primeira:
@@ -378,6 +423,7 @@ typdef struct {
   int idade;
 }Pessoa;
 ```
+
 ```cpp
 //podemos utilizar da seguinte sintaxe para a segunda maneira:
 //struct NomeDaStruct {DADOS DA STRUCT};
@@ -394,8 +440,10 @@ bob.idade = 20;
 cout << "Nome: " << bob.nome << "\n";
 cout << "Idade: " << bob.idade << "\n";
 ```
+
 Porém reparem eu não resolvi nosso problema, ainda preciso criar 50 variáveis para criar 50 pessoas?
 Não! Nós podemos utilizar do tipo criado por nós para criarmos um array daquele tipo.
+
 ```cpp
 struct Pessoa
     {
@@ -405,7 +453,7 @@ struct Pessoa
     };
     //Aqui crio um array de pessoas do tipo Pessoa de 3 posições
     Pessoa pessoas[3];
-    
+
     pessoas[0].nome = "Bob Wilson";
     pessoas[0].idade = 33;
     pessoas[0].salario = 890.50;
@@ -437,6 +485,29 @@ struct Pessoa
     }
 ```
 
+Há diversas maneiras de utilizar structs, deixo mais um [link](https://www.inf.pucrs.br/~pinho/LaproI/Structs/Structs.htm) de referência para leitura e aprofundamento em structs.
+
+Agora para continuar nosso aprofundamento em c++ deixo a seguinte ordem para se seguir:
+
+- [Revisão](https://github.com/Jbnado/EstruturaDeDados-Fatec/tree/main/revisao) (é um exercício de structs proposto por meu professor).
+- [OOP](https://github.com/Jbnado/EstruturaDeDados-Fatec/tree/main/oop) (introdução de programação orientada a objetos em c++).
+
+... Tem mais por vir, fique de olho :vulcan_salute:
+
+# Agradecimentos
+
+Só tenho a agradecer a todos que desejarem contribuir com este projeto, seja melhorando a semântica, a forma como escrevi, erros de gramática ou erros em afirmações. Seja com mais exemplos e etc.
+Porém o primeiro agradecimento vem a meus professores da FATEC, que me ensinaram esta linguagem, mesmo que eu não trabalhe com a mesma, só de ter de conhecimento e agora ter tido inspiração para todo este arquivo já fico bem feliz:
+
+- [Lucas Baggio](http://lattes.cnpq.br/1353527752019495)
+  @github.com/lucasbf
+- [Fernando Perez](http://lattes.cnpq.br/8922036514720973)
+- [Mateus Machado](https://www.linkedin.com/in/mateus-machado-335545192/)
+  @github.com/mtarcinalli
+
+Recomendo a todos visualizar o perfil do Mateus, afinal quem lecionou a matéria que inspira este repositório vem toda dele.
+
 # Referências
+
 - PEOPLE, O que são variáveis e para que elas servem na programação? Disponível em: <https://www.people.com.br/noticias/informatica/o-que-sao-variaveis-e-para-que-elas-servem-na-programacao>. Acesso em 12/03/2022.
 - Feofiloff, P. Linguagem C: endereços e ponteiros. DCC-IME-USP, set 2018. Disponível em <https://www.ime.usp.br/~pf/algoritmos/aulas/pont.html>. Acesso em 12/03/2022.
