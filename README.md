@@ -499,11 +499,11 @@ Agora para continuar nosso aprofundamento em c++ deixo a seguinte ordem para se 
 Só tenho a agradecer a todos que desejarem contribuir com este projeto, seja melhorando a semântica, a forma como escrevi, erros de gramática ou erros em afirmações. Seja com mais exemplos e etc.
 Porém o primeiro agradecimento vem a meus professores da FATEC, que me ensinaram esta linguagem, mesmo que eu não trabalhe com a mesma, só de ter de conhecimento e agora ter tido inspiração para todo este arquivo já fico bem feliz:
 
-- [Lucas Baggio](http://lattes.cnpq.br/1353527752019495)
-  @github.com/lucasbf
+- [Lucas Baggio](http://lattes.cnpq.br/1353527752019495)<br>
+  https://github.com/lucasbf
 - [Fernando Perez](http://lattes.cnpq.br/8922036514720973)
-- [Mateus Machado](https://www.linkedin.com/in/mateus-machado-335545192/)
-  @github.com/mtarcinalli
+- [Mateus Machado](https://www.linkedin.com/in/mateus-machado-335545192/)<br>
+  https://github.com/mtarcinalli
 
 Recomendo a todos visualizar o perfil do Mateus, afinal quem lecionou a matéria que inspira este repositório vem toda dele.
 
