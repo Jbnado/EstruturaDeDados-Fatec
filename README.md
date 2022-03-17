@@ -17,6 +17,27 @@
 
 Este repositório foi criado para acompanhar as aulas de estruturas de dados na FATEC (Faculdade de Tecnologia de Ribeirão Preto), o intuito dele é ter comentários para que qualquer um que venha a ler entenda o que está acontecendo. Para ficar mais claro decidi criar este README, é o primeiro que crio para um projeto e espero que ele lhe ajude a conhecer e entender a linguagem proposta assim como as estruturas de dados utilizadas.
 
+## Como rodar o projeto no Windows
+- [Baixe o VsCode](https://code.visualstudio.com/).
+  - Baixe as seguintes extensões:
+    C/C++ da Microsoft. ID da extensão: ms-vscode.cpptools.
+    C/C++ Compile Run do danielpinto8zz6. Id da extensão: danielpinto8zz6.c-cpp-compile-run.
+- [Baixe o MingW](https://sourceforge.net/projects/mingw/files/).
+  - Tente instalar na pasta C:, assim fica mais fácil de encontrar.
+  - Após instalar o MingW entre na pasta que você o instalou, depois veja a pasta bin e copie este caminho.
+  - Adicione o caminho do MingW\bin na variável de ambiente path.
+  ![image](https://user-images.githubusercontent.com/73846881/158899051-03f3e998-964a-4d09-9fbd-ff512c3c3549.png)
+  ![image](https://user-images.githubusercontent.com/73846881/158899103-2f5c407f-b456-4660-a7d9-3f55ae0ff93c.png)
+- [Instale o Git](https://git-scm.com/downloads).
+- Entre em alguma pasta que você deseja salvar este repositório.
+- Abra um terminal com o caminho da pasta desejada e dê o seguinte comando:
+  ```git
+  git clone https://github.com/Jbnado/EstruturaDeDados-Fatec.git
+  ```
+- Agora é só abrir esta pasta no VsCode e curtir nosso projeto!
+- Para compilar é só ir nos arquivos .cpp, abra-os no VsCode e utilize o atalho ctrl + 6 ou F6.
+  Siga o Readme para saber quais arquivos .cpp podemos estar compilando!
+
 ## Hello World
 
 A pasta [Hello World](https://github.com/Jbnado/EstruturaDeDados-Fatec/tree/main/helloWorld) é onde se inicia nosso entendimento na linguagem, na linguagem c é comum o uso de includes, os includes é o comando para incluir bibliotecas prontas para facilitar nossa escrita e entendimento do código, cada biblioteca assim como na realidade tem diversos livros, porém no caso das bibliotecas em c estes livros seriam funções e metódos para serem reutilizados.
